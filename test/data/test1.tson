@@ -8,21 +8,26 @@ MULTILINE COMMENT
 	SomeClass
 		@context
 			doap:repo <http://github.com/kba/turtleson>
-			dc:description """
+			'dc:description' """
 				CSON + Unquoted keys + No colon
 				CSON + Unquoted keys + No colon
 			"""
+			blork: [
+				'foo'
+				xsd:bar
+				7
+			]
 		@schema			
 			someProp
 				@context
 					dc:title 'Foo'
 					foaf:knows
 						@id <http://foo.bar>
-						# TODO xsd:int without quotes should be allowed
-						@type "xsd:int"
-						# TODO @id without quotes should be allowed
-						@value '@id'
-				@schema
+						@type xsd:int
+						@value @id   
+				@schema			
+					x:love: 7
+					x:love : 7
 					x:love 7
 nest:
 	'this'
