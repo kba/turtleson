@@ -1,0 +1,32 @@
+###
+MULTILINE COMMENT
+###
+# vim: set ts=4 sw=4 noexpandtab :
+@context
+	dc:title "TSON schema/ontology"
+@schema
+	SomeClass
+		@context
+			doap:repo <http://github.com/kba/turtleson>
+			dc:description """
+				CSON + Unquoted keys + No colon
+				CSON + Unquoted keys + No colon
+			"""
+		@schema			
+			someProp
+				@context
+					dc:title 'Foo'
+					foaf:knows
+						@id <http://foo.bar>
+						# TODO xsd:int without quotes should be allowed
+						@type "xsd:int"
+						# TODO @id without quotes should be allowed
+						@value '@id'
+				@schema
+					x:love 7
+nest:
+	'this'
+		'deeper':
+			"and"
+				deeper
+					"and": <deeper>
