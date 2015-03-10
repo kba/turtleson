@@ -1,6 +1,6 @@
 {
   "name": "tson",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Turtle Coffee JSON",
   "scripts": {
     "test": "coffee test/*.coffee | tap-spec",
