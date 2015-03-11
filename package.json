@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kba/tson"
+    "url": "https://github.com/kba/turtleson"
   },
   "author": "kba",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kba/tson/issues"
+    "url": "https://github.com/kba/turtleson/issues"
   },
-  "homepage": "https://github.com/kba/tson",
+  "homepage": "https://github.com/turtleson/tson",
   "dependencies": {
     "cson": "^2.0.0"
   },
