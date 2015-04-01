@@ -92,7 +92,7 @@ class TSON
 			outText += line
 			outText += "\n"
 		# console.log outText
-		Vim2HTML.highlightString outText, '/tmp/mep', {syntax:'coffee', tabstop: 2}, () ->
+		# Vim2HTML.highlightString outText, '/tmp/mep', {syntax:'coffee', tabstop: 2}, () ->
 		return outText
 
 	parse: -> @parseString.apply(@, arguments)
