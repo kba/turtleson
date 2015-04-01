@@ -20,14 +20,14 @@
   },
   "homepage": "https://github.com/turtleson/tson",
   "dependencies": {
-    "cson": "^2.0.0"
+    "cson": "^3.0.1"
   },
   "devDependencies": {
     "coffee-script": "^1.9.1",
     "docker": "^0.2.14",
     "tap-spec": "^2.2.2",
     "tapes": "^0.4.1",
-    "vim2html": "0.0.1"
+    "vim2html": "0.0.2"
   },
   "main": "lib/index.js"
 }

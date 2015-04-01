@@ -4,7 +4,7 @@
 ###
 Fs = require 'fs'
 CSON = require 'cson'
-Vim2HTML = require 'vim2html'
+# Vim2HTML = require 'vim2html'
 
 class TSON
 	_quoteValueIfNecessary: (s) ->
