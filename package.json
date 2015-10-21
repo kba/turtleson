@@ -1,6 +1,7 @@
 {
   "name": "tson",
-  "version": "0.0.5", "description": "Turtle Coffee JSON",
+  "version": "0.0.6",
+  "description": "Turtle Coffee JSON",
   "scripts": {
     "test": "coffee test/*.coffee | tap-spec",
     "docs": "docker -i src -o apidocs -s -n -c vs",
