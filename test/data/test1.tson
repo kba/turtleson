@@ -17,7 +17,7 @@ MULTILINE COMMENT
 				xsd:bar
 				7
 			]
-		@schema			
+		@schema
 			someProp
 				@context
 					dc:title 'Foo'
@@ -35,3 +35,7 @@ nest:
 			"and"
 				deeper
 					"and": <deeper>
+foo: [{
+	bla: quux
+	foo bar
+}]
