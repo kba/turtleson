@@ -7,7 +7,8 @@ if (args.length === 0) {
 } else if (args[0] === '--pretty') {
   var obj = TSON.load(args[1]);
   console.log(util.inspect(obj, {
-    "colors": true
+    colors: true,
+    depth: 10
   }));
 } else {
   var obj = TSON.load(args[0]);
