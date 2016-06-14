@@ -20,6 +20,8 @@ class TSON
 		# return s if /^null$/.test(s)
 		# unless it is an array/object opener
 		return s if /[\[\{]\s*$/.test(s)
+		# unless it is an array/object closer
+		return s if /[\]\}]\s*$/.test(s)
 		# It's a string, quote it
 		return "'#{s}'"
 
@@ -95,19 +97,22 @@ class TSON
 		# Vim2HTML.highlightString outText, '/tmp/mep', {syntax:'coffee', tabstop: 2}, () ->
 		return outText
 
+	parseCSON: (inText) ->
+		return @_convertToCSON(inText)
+
+	loadCSON: (file) ->
+		inText = Fs.readFileSync(file)
+		return inText if inText instanceof Error
+		return @parseCSON inText.toString()
+
 	parse: -> @parseString.apply(@, arguments)
-	parseString: (inText, opts) ->
-		return CSON.parseString @_convertToCSON(inText)
+	parseString: (inText) ->
+		return CSON.parseString @parseCSON inText
 
 	load: -> @loadFile.apply(@, arguments)
-	loadFile: (file, opts) ->
-		inputString = Fs.readFileSync(file)
-		return inputString if inputString instanceof Error
-		# console.log inputString.toString()
-		outputString = @parseString(inputString.toString(), opts)
-		return outputString
+	loadFile: (file) ->
+		return @parseString @loadCSON file
 
 module.exports = new TSON
-
 
 # ALT: test/test.coffee
